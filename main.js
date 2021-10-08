@@ -453,7 +453,7 @@ bot.on("messageCreate", async msg => {
     let animeTitle = msg.content.split(" ");
     animeTitle.shift()
     animeTitle = animeTitle.join(" ")
-    const unscappedCharachters = /[\W\-\.]/ig
+    const unscappedCharachters = /\@\#\_\-\.\?\&\₱\$\®\¿\~\™\+\! \/\*\=\¢\;\`\[\] \{\} \<\>\^\¡\¿\€\¢\§\×\¶\°\¬\:\;\§/ig
     if (animeTitle.match(unscappedCharachters)) {
       msg.channel.createMessage({ content: "No Anime Found", messageReferenceID: msg.id })
       return;
