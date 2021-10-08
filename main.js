@@ -1,6 +1,6 @@
 
 const Eris = require("eris");
-const bot = new Eris("Bot ODk0MjUzNDEwNDYxODE4OTMw.YVnUYw.QZvSu5aqyk-zvxrb1V1ozq6f8YI");
+const bot = new Eris(`Bot ${process.env.BOT_TOKEN}`);
 const axios = require("axios");
 const prefix = "*"
 
