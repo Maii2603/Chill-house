@@ -450,14 +450,14 @@ bot.on("messageCreate", async msg => {
 
 bot.on("messageCreate", async msg => {
   if (msg.content.startsWith(`${prefix}anime`)) {
-    let animeTitle = msg.content.split(" ");
+    /*let animeTitle = msg.content.split(" ");
     animeTitle.shift()
     animeTitle = animeTitle.join(" ")
     const unscappedCharachters = /[\@\#\_\-\.\?\&\₱\$\®\¿\~\™\+\! \/\*\=\¢\;\`\[\] \{\} \<\>\^\¡\¿\€\¢\§\×\¶\°\¬\:\;\§]/ig
     if (animeTitle.match(unscappedCharachters)) {
       msg.channel.createMessage({ content: "No Anime Found", messageReferenceID: msg.id })
       return;
-    }
+    }*/
     const fetchAnime = await axios.get(`https://kitsu.io/api/edge/anime?filter[text]=${animeTitle}`);
     if (fetchAnime.data.data.length === 0) {
       msg.channel.createMessage({ content: "No Anime Found", messageReferenceID: msg.id })
