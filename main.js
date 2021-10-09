@@ -562,6 +562,26 @@ bot.on("messageCreate", async msg => {
   if (msg.content.startsWith(`${prefix}removeRole`) && msg.mentions.length === 0 && msg.member.permissions.has("banMembers")) {
     msg.channel.createMessage({ content: "```\nto remove a role just type\n'*removeRole [role] [user]'```", MessageReferenceID: msg.id })
   }
+  
+  if(msg.content.startsWith(`${prefix}apply`) && msg.member.permissions.has("banMembers")){
+    
+   const succesApply = {
+     embed:{
+       title:"LOOKING FOR INTERVIEWER", 
+       description:"Hello Guys! Me and the Admins talked About Recruiting some Interviewer  in this Server, if you want to be an Interviewer just DM me or the other Admins.", 
+       fields:[{
+         name:"REQUIREMENTS", 
+         value:"🟥 Full Name\n\n🟥 Age\n\n🟥 Location\n\n🟥 How often do you use a discord"
+       }], 
+       color:0xff0000,
+       footer:{
+         text:"CHILL HOUSE"
+       }
+     }
+   }
+   
+  bot.createMessage(msg.channel.id,succesApply)
+  }
 })
 
 bot.on("messageReactionAdd", (msg, emoji, reactor) => {
