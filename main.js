@@ -571,7 +571,7 @@ bot.on("messageCreate", async msg => {
        description:"Hello Guys! Me and the Admins talked About Recruiting some Interviewer  in this Server, if you want to be an Interviewer just DM me or the other Admins.", 
        fields:[{
          name:"REQUIREMENTS", 
-         value:"🟥 Full Name\n\n🟥 Age\n\n🟥 Location\n\n🟥 How often do you use a discord"
+         value:"🟥 Full Name\n\n🟥 Age\n\n🟥 Location\n\n🟥 How often do you use a discord\n\n🟥 Your reason on why do you want to Apply as an Interviewer in this Server"
        }], 
        color:0xff0000,
        footer:{
