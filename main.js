@@ -262,6 +262,9 @@ async function deleteSwearMessages(msg) {
   if (msg.content.match(swearMessages)) {
     bot.deleteMessage(msg.channel.id, msg.id)
   }
+  if(msg.content.length >= 200 && msg.member.permissions.has("banMembers")){
+    return;
+  }
   if (msg.content.length >= 200) {
     bot.deleteMessage(msg.channel.id, msg.id)
       .then(deleted => {
