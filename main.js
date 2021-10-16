@@ -282,6 +282,9 @@ bot.on("messageCreate", msg => {
   reactToMessages(msg, msg.channel.id, msg.id, "Pepe_Crown:892783785656074241");
   reactToMessages(msg, msg.channel.id, msg.id, "👋");
   reactToMessages(msg, msg.channel.id, msg.id, "ZeroTwo_heartlove:893519792194084915");
+  if(msg.author.id === "276060004262477825" && msg.channel.id === "885734911187779585"){
+    bot.createMessage(msg.channel.id,`<@&898390009210621962> Let's welcome our new member in <#885495865781944360>`)
+  }
 })
 
 
