@@ -476,7 +476,7 @@ bot.on("messageCreate", async msg => {
     }
     bot.createMessage(msg.channel.id,secondCategory)
   }
-  if(msg.content === "serverRules3" && msg.author.id === "763635514158350356"){
+  if(msg.content === "*serverRules3" && msg.author.id === "763635514158350356"){
     const thirdCategory = {
       embed:{
         title:"Server Information",
@@ -484,8 +484,8 @@ bot.on("messageCreate", async msg => {
         color:0xff0000
       }
     }
+    bot.createMessage(msg.channel.id,thirdCategory)
   }
-  bot.createMessage(msg.channel.id,thirdCategory)
 })
 
 bot.on("messageCreate", msg => {
