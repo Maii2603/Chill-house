@@ -429,7 +429,7 @@ bot.on("messageCreate", async msg => {
           value:"Swearing and posting NSFW content is not allowed. Bypassing filters, using abbreviations/acronyms, or using the Discord spoiler feature to get your message across is also not allowed."
         },{
           name:"1.3",
-          value:"All forms of racist, discriminatory, and offensive jokes are not allowed."
+          value:"Please be respectful to everyone on this server. Name-calling, harassing, and arguing, or causing unnecessary altercations is strictly prohibited."
         },{
           name:"1.4",
           value:"All forms of racist, discriminatory, and offensive jokes are not allowed."
