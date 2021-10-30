@@ -610,17 +610,31 @@ bot.on("messageCreate", async msg => {
     mesage = mesage.join(" ")
     bot.createMessage("885495865781944360", mesage)
   }
-  if (msg.content.startsWith(`${prefix}roles`) && msg.member.permissions.has("banMembers") && msg.channel.id === "887161392988311612") {
+  /* Gaming Roles
+
+@PUBG Mobile Ping 
+@Roblox Ping 
+@Valorant Ping 
+@League of Legends Ping 
+@Axie Infinity Ping 
+@COD Mobile Ping 
+@Dota 2 Ping 
+@Genshin Impact Ping 
+@Grand Theft Auto V Ping 
+@Grand Theft Auto San Andreas Ping 
+@Minecraft Ping 
+@Mobile Legends BB Ping 
+@Pokemon Unite Ping*/
+  if (msg.content.startsWith(`${prefix}gamingroles`) && msg.member.permissions.has("banMembers")) {
     const roleEmbed = {
       embed: {
-        title: "REACTION ROLRS",
-        description: "React to this message to get Roles",
+        title: "GAMING ROLES",
         fields: [{
           name: `GTA V`,
-          value: `React <:gta_v:895142405265829899> to get\n<@&895306958414970951> role`
+          value: `<:gta_v:895142405265829899> | <@&895306958414970951>`
         }, {
           name: "GTA SAN ANDREAS",
-          value: `React to get\n<:gta_SA:895297858373300316> <@&895307121653059654> role`
+          value: `<:gta_SA:895297858373300316> | <@&895307121653059654>`
         }],
         color: 0xff0000
       }
@@ -654,26 +668,6 @@ bot.on("messageCreate", async msg => {
 
   if (msg.content.startsWith(`${prefix}removeRole`) && msg.mentions.length === 0 && msg.member.permissions.has("banMembers")) {
     msg.channel.createMessage({ content: "```\nto remove a role just type\n'*removeRole [role] [user]'```", MessageReferenceID: msg.id })
-  }
-  
-  if(msg.content.startsWith(`${prefix}apply`) && msg.member.permissions.has("banMembers")){
-    
-   const succesApply = {
-     embed:{
-       title:"LOOKING FOR INTERVIEWER", 
-       description:"Hello Guys! Me and the Admins talked About Recruiting some Interviewer  in this Server, if you want to be an Interviewer just DM me or the other Admins.", 
-       fields:[{
-         name:"REQUIREMENTS", 
-         value:"🟥 Full Name\n\n🟥 Age\n\n🟥 Location\n\n🟥 How often do you use a discord\n\n🟥 Your reason on why do you want to Apply as an Interviewer in this Server"
-       }], 
-       color:0xff0000,
-       footer:{
-         text:"CHILL HOUSE"
-       }
-     }
-   }
-   
-  bot.createMessage(msg.channel.id,succesApply)
   }
 })
 
