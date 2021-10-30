@@ -420,7 +420,7 @@ bot.on("messageCreate", async msg => {
   if(msg.content === "*serverRules" && msg.author.id === "763635514158350356"){
     const serverRules = {
       embed:{
-        title:"Server Rules (Section 1-General Server Rules", 
+        title:"Server Rules (Section 1-General Server Rules)", 
         fields:[{
           name:"1.1", 
           value:"This server is a Filipino-based server, so please refrain from speaking in any other languages."
@@ -457,6 +457,35 @@ bot.on("messageCreate", async msg => {
     }
     bot.createMessage(msg.channel.id,serverRules)
   }
+  if(msg.content === "*serverRules2" && msg.author.id === "763635514158350356"){
+    const secondCategory = {
+      embed:{
+        title:"Server Rules (Section 2 - Voice Channel Rules)", 
+        fields:[{
+          name:"2.1",
+          value:"All general/chat rules apply to voice channels."
+        },{
+          name:"2.2",
+          value:"Screaming through your mic or having too much background noise may cause you to be muted for some time."
+        },{
+          name:"2.3",
+          value:"Playing music through your mic could result in you being kicked or muted."
+        }], 
+        color:0xff0000
+      }
+    }
+    bot.createMessage(msg.channel.id,secondCategory)
+  }
+  if(msg.content === "serverRules3" && msg.author.id === "763635514158350356"){
+    const thirdCategory = {
+      embed:{
+        title:"Server Information",
+        description:"On the 15th of September, Ashy started this server. Chill House is a fun community to be a part of. We hope it remains non-toxic and a safe environment for everyone..", 
+        color:0xff0000
+      }
+    }
+  }
+  bot.createMessage(msg.channel.id,thirdCategory)
 })
 
 bot.on("messageCreate", msg => {
