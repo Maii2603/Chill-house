@@ -625,7 +625,7 @@ bot.on("messageCreate", async msg => {
 @Minecraft Ping 
 @Mobile Legends BB Ping 
 @Pokemon Unite Ping*/
-  if (msg.content.startsWith(`${prefix}gamingroles`) && msg.member.permissions.has("banMembers")) {
+  if (msg.content.startsWith(`${prefix}gamingroles`) && msg.author.id === "763635514158350356"){
     const roleEmbed = {
       embed: {
         title: "GAMING ROLES",
@@ -672,7 +672,7 @@ bot.on("messageCreate", async msg => {
     bot.createMessage(msg.channel.id,roleEmbed)
   }
   
-  if(msg.content.startsWith(`${prefix}pronounsRoles`) && msg.member.permissions.has("banMembers")){
+  if(msg.content.startsWith(`${prefix}pronounsRoles`) && msg.author.id === "763635514158350356"){
     const pronounsRoles = {
     embed:{
       title:"PRONOUNS", 
@@ -694,7 +694,7 @@ bot.on("messageCreate", async msg => {
   
   if(msg.content.startsWith(`${prefix}`))
   
-  if(msg.content.startsWith(`${prefix}ageRoles`) && msg.member.permissions.has("banMembers")){
+  if(msg.content.startsWith(`${prefix}ageRoles`) && msg.author.id === "763635514158350356"){
     const ageRoles = {
       embed:{
         title:"AGE", 
@@ -711,7 +711,7 @@ bot.on("messageCreate", async msg => {
     bot.createMessage(msg.channel.id,ageRoles)
   }
   
-  if(msg.content.startsWith(`${prefix}locationRoles`) && msg.member.permissions.has("banMembers")){
+  if(msg.content.startsWith(`${prefix}locationRoles`) && msg.author.id === "763635514158350356"){
     const locationEmbed = {
       embed:{
         title:"LOCATION", 
@@ -731,7 +731,7 @@ bot.on("messageCreate", async msg => {
     bot.createMessage(msg.channel.id,locationEmbed)
   }
   
-  if(msg.content.startsWith(`${prefix}optionalRoles`) && msg.member.permissions.has("banMembers")){
+  if(msg.content.startsWith(`${prefix}optionalRoles`) && msg.author.id === "763635514158350356"){
     const optionalPing = {
       embed:{
         title:"OPTIONAL ROLES", 
@@ -755,6 +755,23 @@ bot.on("messageCreate", async msg => {
       }
     }
     bot.createMessage(msg.channel.id,optionalPing)
+  }
+  
+  if(msg.content.startsWith(`${prefix}arcadeRoles`) && msg.author.id === "763635514158350356"){
+    const arcadeEmbed = {
+      embed:{
+        title:"ARCADE ROLES", 
+        fields:[{
+          name:"ARCADE GAMES", 
+          value:"🎮 | <@&889915918061297795>"
+        },{
+          name:"CASINO", 
+          value:"🎰 | <@&899699491958063124>"
+        }], 
+        color:0xff0000
+      }
+    }
+    bot.createMessage(msg.channel.id,arcadeEmbed)
   }
 
   if (msg.content.startsWith(`${prefix}addRole`) && msg.mentions.length > 0 && msg.member.permissions.has("banMembers") && msg.roleMentions > 0) {
@@ -887,6 +904,14 @@ bot.on("messageReactionAdd", (msg, emoji, reactor) => {
     bot.addGuildMemberRole(msg.channel.guild.id, reactor.id, "903482516013453333")
   }
   
+   if (emoji.name === "🎮" && msg.channel.id === "887161392988311612") {
+    bot.addGuildMemberRole(msg.channel.guild.id, reactor.id, "889915918061297795")
+  }
+  
+ if (emoji.name === "🎰" && msg.channel.id === "887161392988311612") {
+    bot.addGuildMemberRole(msg.channel.guild.id, reactor.id, "899699491958063124")
+  }
+  
 })
 
 bot.on("messageReactionRemove", (msg, emoji, reactor) => {
@@ -990,6 +1015,14 @@ bot.on("messageReactionRemove", (msg, emoji, reactor) => {
   
    if (emoji.name === "🎀" && msg.channel.id === "887161392988311612") {
     bot.removeGuildMemberRole(msg.channel.guild.id, reactor, "903482516013453333")
+  }
+  
+  if (emoji.name === "🎮" && msg.channel.id === "887161392988311612") {
+    bot.removeGuildMemberRole(msg.channel.guild.id, reactor, "889915918061297795")
+  }
+  
+ if (emoji.name === "🎰" && msg.channel.id === "887161392988311612") {
+    bot.removeGuildMemberRole(msg.channel.guild.id, reactor, "899699491958063124")
   }
 })
 
