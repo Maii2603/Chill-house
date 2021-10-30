@@ -750,6 +750,9 @@ bot.on("messageCreate", async msg => {
         },{
           name:"EVENT PING", 
           value:"🎀 | <@&903482516013453333>"
+        },{
+          name:"MOVIE PING", 
+          value:"🍿 | <@&899930374698848276>"
         }], 
         color:0xff0000
       }
@@ -930,6 +933,10 @@ bot.on("messageReactionAdd", (msg, emoji, reactor) => {
     bot.addGuildMemberRole(msg.channel.guild.id, reactor.id, "899699491958063124")
   }
   
+   if (emoji.name === "🍿" && msg.channel.id === "887161392988311612") {
+    bot.addGuildMemberRole(msg.channel.guild.id, reactor.id, "899930374698848276")
+  }
+  
 })
 
 bot.on("messageReactionRemove", (msg, emoji, reactor) => {
@@ -1041,6 +1048,10 @@ bot.on("messageReactionRemove", (msg, emoji, reactor) => {
   
  if (emoji.name === "🎰" && msg.channel.id === "887161392988311612") {
     bot.removeGuildMemberRole(msg.channel.guild.id, reactor, "899699491958063124")
+  }
+  
+ if (emoji.name === "🍿" && msg.channel.id === "887161392988311612") {
+    bot.removeGuildMemberRole(msg.channel.guild.id, reactor, "899930374698848276")
   }
 })
 
