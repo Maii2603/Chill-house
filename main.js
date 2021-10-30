@@ -685,10 +685,27 @@ bot.on("messageCreate", async msg => {
       },{
         name:"THEY/THEM", 
         value:"👤 | <@&889871907745300521>"
-      }]
+      }], 
+      color:0xff0000
      } 
     }
     bot.createMessage(msg.channel.id,pronounsRoles)
+  }
+  
+  if(msg.content.startsWith(`${prefix}ageRoles`) && msg.member.permissions.has("banMembers")){
+    const ageRoles = {
+      embed:{
+        title:"AGE", 
+        fields:[{
+          name:"17-", 
+          value:"🟥 | <@&889871195435044915>"
+        },{
+          name:"18+",
+          value:"🟩 | <@&889870943642607616>"
+        }]
+      }
+    }
+    bot.createMessage(msg.channel.id,ageRoles)
   }
 
   if (msg.content.startsWith(`${prefix}addRole`) && msg.mentions.length > 0 && msg.member.permissions.has("banMembers") && msg.roleMentions > 0) {
