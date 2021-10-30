@@ -672,10 +672,10 @@ bot.on("messageCreate", async msg => {
     bot.createMessage(msg.channel.id,roleEmbed)
   }
   
-  if(msg.content.startsWith(`${prefix}pronounceRoles`) && msg.member.permissions.has("banMembers")){
-    const pronounceRoles = {
+  if(msg.content.startsWith(`${prefix}pronounsRoles`) && msg.member.permissions.has("banMembers")){
+    const pronounsRoles = {
     embed:{
-      title:"PRONOUNCE", 
+      title:"PRONOUNS", 
       fields:[{
         name:"SHE/HER", 
         value:"👱‍♀️ | <@&889871355732979763>"
@@ -688,7 +688,7 @@ bot.on("messageCreate", async msg => {
       }]
      } 
     }
-    bot.createMessage(msg.channel.id,pronounceRoles)
+    bot.createMessage(msg.channel.id,pronounsRoles)
   }
 
   if (msg.content.startsWith(`${prefix}addRole`) && msg.mentions.length > 0 && msg.member.permissions.has("banMembers") && msg.roleMentions > 0) {
