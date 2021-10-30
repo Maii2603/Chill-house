@@ -816,6 +816,7 @@ bot.on("messageCreate", async msg => {
         color:0xff0000
       }
     }
+    bot.createMessage(msg.channel.id,requirementsEmbed)
   }
   
 })
