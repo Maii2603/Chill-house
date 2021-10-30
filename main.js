@@ -630,40 +630,40 @@ bot.on("messageCreate", async msg => {
       embed: {
         title: "GAMING ROLES",
         fields: [{
-          name: `GTA V`,
+          //name: `GTA V`,
           value: `<:gta_v:895142405265829899> | <@&895306958414970951>`
         }, {
-          name: "GTA SAN ANDREAS",
+          //name: "GTA SAN ANDREAS",
           value: `<:gta_SA:895297858373300316> | <@&895307121653059654>`
         },{
-          name:"MOBILE LEGENDS",
+          //name:"MOBILE LEGENDS",
           value:"<:MLBB:889921096122515527> | <@&889922908569341983>"
         },{
-          name:"VALORANT", 
+          //name:"VALORANT", 
           value:"<:valorant_logo:889921259012493372> | <@&889922818215669780>"
         },{
-          name:"ROBLOX", 
+          //name:"ROBLOX", 
           value:"<:Roblox:889921903769313352> | <@&890049588516503632>"
         },{
-          name:"LEAGUE OF LEGENDS", 
+          //name:"LEAGUE OF LEGENDS", 
           value:"<:bettermissingping:889919620289540126> | <@&889922633347498025>"
         },{
-          name:"WILDRIFT", 
+          //name:"WILDRIFT", 
           value:"<:WildRift:889920375520124988> | <@&889922692805984257>"
         },{
-          name:"CALL OF DUTY MOBILE", 
+          //name:"CALL OF DUTY MOBILE", 
           value:"<:CODM:889920764428558437> | <@&889922862381678642>"
         },{
-          name:"DOTA 2",
+          //name:"DOTA 2",
           value:"<:DOTA2:889925865192968272> | <@&889922748489547837>"
         },{
-          name:"AXIE INFINITY", 
+          //name:"AXIE INFINITY", 
           value:"<:AxieInfinity:889921393884553247> | <@&889923058675105822>"
         },{
-          name:"GENSHIN IMPACT", 
+          //name:"GENSHIN IMPACT", 
           value:"<:emoji_86:903278831991935088> | <@&889923119190536253>"
         },{
-          name:"POKÉMON UNITE", 
+          //name:"POKÉMON UNITE", 
           value:"<:Cat_sip:894497557026316290> | <@&895309063028604969>"
         }],
         color: 0xff0000
