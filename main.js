@@ -768,17 +768,104 @@ bot.on("messageReactionAdd", (msg, emoji, reactor) => {
   if (emoji.name === "gta_SA" && msg.channel.id === "887161392988311612") {
     bot.addGuildMemberRole(msg.channel.guild.id, reactor.id, "895307121653059654")
   }
+  
+  if (emoji.name === "MLBB" && msg.channel.id === "887161392988311612") {
+    bot.addGuildMemberRole(msg.channel.guild.id, reactor.id, "889922908569341983")
+  }
 
+  if (emoji.name === "valorant_logo" && msg.channel.id === "887161392988311612") {
+    bot.addGuildMemberRole(msg.channel.guild.id, reactor.id, "889922818215669780")
+  } 
+  
+    if (emoji.name === "Roblox" && msg.channel.id === "887161392988311612") {
+    bot.addGuildMemberRole(msg.channel.guild.id, reactor.id, "890049588516503632")
+  }
+
+  if (emoji.name === "bettermissingping" && msg.channel.id === "887161392988311612") {
+    bot.addGuildMemberRole(msg.channel.guild.id, reactor.id, "889922633347498025")
+  }
+  
+    if (emoji.name === "CODM" && msg.channel.id === "887161392988311612") {
+    bot.addGuildMemberRole(msg.channel.guild.id, reactor.id, "889922862381678642")
+  }
+
+  if (emoji.name === "WildRift" && msg.channel.id === "887161392988311612") {
+    bot.addGuildMemberRole(msg.channel.guild.id, reactor.id, "889922692805984257")
+  }
+  
+    if (emoji.name === "DOTA2" && msg.channel.id === "887161392988311612") {
+    bot.addGuildMemberRole(msg.channel.guild.id, reactor.id, "889922748489547837")
+  }
+
+  if (emoji.name === "AxieInfinity" && msg.channel.id === "887161392988311612") {
+    bot.addGuildMemberRole(msg.channel.guild.id, reactor.id, "889923058675105822")
+  }
+  
+    if (emoji.name === "Cat_sip" && msg.channel.id === "887161392988311612") {
+    bot.addGuildMemberRole(msg.channel.guild.id, reactor.id, "895309063028604969")
+  }
+
+  if (emoji.name === "emoji_86" && msg.channel.id === "887161392988311612") {
+    bot.addGuildMemberRole(msg.channel.guild.id, reactor.id, "889923119190536253")
+  }
+  
 })
 
-bot.on("messageReactionRemove", (msg, emoji, userId) => {
-  if (emoji.name === "gta_v" && msg.channel.id === "887161392988311612") {
+bot.on("messageReactionRemove", (msg, emoji, reactor) => {
+  /*if (emoji.name === "gta_v" && msg.channel.id === "887161392988311612") {
     bot.removeGuildMemberRole(msg.channel.guild.id, userId, "895306958414970951")
   }
 
   if (emoji.name === "gta_SA" && msg.channel.id === "887161392988311612") {
     bot.removeGuildMemberRole(msg.channel.guild.id, userId, "895307121653059654")
+  }*/
+    if (emoji.name === "gta_v" && msg.channel.id === "887161392988311612") {
+    bot.removeGuildMemberRole(msg.channel.guild.id, reactor, "895306958414970951")
   }
+
+  if (emoji.name === "gta_SA" && msg.channel.id === "887161392988311612") {
+    bot.removeGuildMemberRole(msg.channel.guild.id, reactor, "895307121653059654")
+  }
+  
+  if (emoji.name === "MLBB" && msg.channel.id === "887161392988311612") {
+    bot.removeGuildMemberRole(msg.channel.guild.id, reactor, "889922908569341983")
+  }
+
+  if (emoji.name === "valorant_logo" && msg.channel.id === "887161392988311612") {
+    bot.removeGuildMemberRole(msg.channel.guild.id, reactor, "889922818215669780")
+  } 
+  
+    if (emoji.name === "Roblox" && msg.channel.id === "887161392988311612") {
+    bot.removeGuildMemberRole(msg.channel.guild.id, reactor, "890049588516503632")
+  }
+
+  if (emoji.name === "bettermissingping" && msg.channel.id === "887161392988311612") {
+    bot.removeGuildMemberRole(msg.channel.guild.id, reactor, "889922633347498025")
+  }
+  
+    if (emoji.name === "CODM" && msg.channel.id === "887161392988311612") {
+    bot.removeGuildMemberRole(msg.channel.guild.id, reactor, "889922862381678642")
+  }
+
+  if (emoji.name === "WildRift" && msg.channel.id === "887161392988311612") {
+    bot.addGuildMemberRole(msg.channel.guild.id, reactor, "889922692805984257")
+  }
+  
+    if (emoji.name === "DOTA2" && msg.channel.id === "887161392988311612") {
+    bot.removeGuildMemberRole(msg.channel.guild.id, reactor, "889922748489547837")
+  }
+
+  if (emoji.name === "AxieInfinity" && msg.channel.id === "887161392988311612") {
+    bot.removeGuildMemberRole(msg.channel.guild.id, reactor, "889923058675105822")
+  }
+  
+    if (emoji.name === "Cat_sip" && msg.channel.id === "887161392988311612") {
+    bot.removeGuildMemberRole(msg.channel.guild.id, reactor, "895309063028604969")
+  }
+
+  if (emoji.name === "emoji_86" && msg.channel.id === "887161392988311612") {
+    bot.removeGuildMemberRole(msg.channel.guild.id, reactor, "889923119190536253")
+  } 
 })
 
 bot.connect();
