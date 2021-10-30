@@ -692,6 +692,8 @@ bot.on("messageCreate", async msg => {
     bot.createMessage(msg.channel.id,pronounsRoles)
   }
   
+  if(msg.content.startsWith(`${prefix}`))
+  
   if(msg.content.startsWith(`${prefix}ageRoles`) && msg.member.permissions.has("banMembers")){
     const ageRoles = {
       embed:{
@@ -702,10 +704,31 @@ bot.on("messageCreate", async msg => {
         },{
           name:"18+",
           value:"🟩 | <@&889870943642607616>"
-        }]
+        }], 
+        color:0xff0000
       }
     }
     bot.createMessage(msg.channel.id,ageRoles)
+  }
+  
+  if(msg.content.startsWith(`${prefix}locationRoles`) && msg.member.permissions.has("banMembers")){
+    const locationEmbed = {
+      embed:{
+        title:"LOCATION", 
+        fields:[{
+          name:"LUZON", 
+          value:"🌍 | <@&889913442444660796>"
+        },{
+          name:"VISAYAS", 
+          value:"🌎 | <@&889914220362215434>"
+        },{
+          name:"MINDANAO", 
+          value:"🌏 | <@&889914300758646814>"
+        }], 
+        color:0xff0000
+      }
+    }
+    bot.createMessage(msg.channel.id,locationEmbed)
   }
 
   if (msg.content.startsWith(`${prefix}addRole`) && msg.mentions.length > 0 && msg.member.permissions.has("banMembers") && msg.roleMentions > 0) {
