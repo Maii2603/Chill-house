@@ -809,6 +809,17 @@ bot.on("messageReactionAdd", (msg, emoji, reactor) => {
     bot.addGuildMemberRole(msg.channel.guild.id, reactor.id, "889923119190536253")
   }
   
+    if (emoji.name === "👱‍♀️" && msg.channel.id === "887161392988311612") {
+    bot.addGuildMemberRole(msg.channel.guild.id, reactor.id, "889871355732979763")
+  }
+
+  if (emoji.name === "👨‍🦱" && msg.channel.id === "887161392988311612") {
+    bot.addGuildMemberRole(msg.channel.guild.id, reactor.id, "889871191324639282")
+  }
+  
+    if (emoji.name === "👤" && msg.channel.id === "887161392988311612") {
+    bot.addGuildMemberRole(msg.channel.guild.id, reactor.id, "889871907745300521")
+  }
 })
 
 bot.on("messageReactionRemove", (msg, emoji, reactor) => {
@@ -865,6 +876,18 @@ bot.on("messageReactionRemove", (msg, emoji, reactor) => {
 
   if (emoji.name === "emoji_86" && msg.channel.id === "887161392988311612") {
     bot.removeGuildMemberRole(msg.channel.guild.id, reactor, "889923119190536253")
+  }
+  
+    if (emoji.name === "👱‍♀️" && msg.channel.id === "887161392988311612") {
+    bot.removeGuildMemberRole(msg.channel.guild.id, reactor, "889871355732979763")
+  }
+
+  if (emoji.name === "👨‍🦱" && msg.channel.id === "887161392988311612") {
+    bot.removeGuildMemberRole(msg.channel.guild.id, reactor, "889871191324639282")
+  }
+  
+    if (emoji.name === "👤" && msg.channel.id === "887161392988311612") {
+    bot.removeGuildMemberRole(msg.channel.guild.id, reactor, "889871907745300521")
   } 
 })
 
