@@ -717,13 +717,13 @@ bot.on("messageCreate", async msg => {
         title:"LOCATION", 
         fields:[{
           name:"LUZON", 
-          value:"🌍 | <@&889913442444660796>"
+          value:"🏙️ | <@&889913442444660796>"
         },{
           name:"VISAYAS", 
-          value:"🌎 | <@&889914220362215434>"
+          value:"🌄 | <@&889914220362215434>"
         },{
           name:"MINDANAO", 
-          value:"🌏 | <@&889914300758646814>"
+          value:"🏖️ | <@&889914300758646814>"
         }], 
         color:0xff0000
       }
@@ -827,6 +827,18 @@ bot.on("messageReactionAdd", (msg, emoji, reactor) => {
 
   if (emoji.name === "🟩" && msg.channel.id === "887161392988311612") {
     bot.addGuildMemberRole(msg.channel.guild.id, reactor.id, "889870943642607616")
+  }
+  
+  if (emoji.name === "🏙️" && msg.channel.id === "887161392988311612") {
+    bot.addGuildMemberRole(msg.channel.guild.id, reactor.id, "889913442444660796")
+  }
+
+  if (emoji.name === "🌄" && msg.channel.id === "887161392988311612") {
+    bot.addGuildMemberRole(msg.channel.guild.id, reactor.id, "889914220362215434")
+  }
+  
+ if (emoji.name === "🏖️" && msg.channel.id === "887161392988311612") {
+    bot.addGuildMemberRole(msg.channel.guild.id, reactor.id, "889914300758646814")
   }
 })
 
