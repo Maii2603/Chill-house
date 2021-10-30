@@ -807,7 +807,7 @@ bot.on("messageCreate", async msg => {
       embed:{
         title:"REQUIREMENTS FOR PARTNERSHIP", 
         thumbnail:{
-          url:"https://media.discordapp.net/attachments/894877379619598346/903964767247544320/acf4e57bd778d573200d48ff9d52f5ae.gif"
+          url:"https://raw.githubusercontent.com/Maii2603/chill-house-images/main/standard%20(1).gif"
         }, 
         description:"• Must have 250 members above\n- Must have the certain amount of people who is active & bots must be excluded in the member count.\n\n• Friendly for any types of people & Nsfw\n- Must be friendly and no bad things in your server and if we saw one we will cancel our partnership with you.\n\n• Follow our Event or Give away Channels\n- Must follow our Event or Give away channels and we will do the same as you did.\n\n•Please dm our <@&896654701955788862> for partnerships", 
         image:{
