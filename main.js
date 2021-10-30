@@ -639,7 +639,7 @@ bot.on("messageCreate", async msg => {
         color: 0xff0000
       }
     }
-    bot.createMessage("887161392988311612", roleEmbed)
+    bot.createMessage(msg.channel.id,roleEmbed)
   }
 
   if (msg.content.startsWith(`${prefix}addRole`) && msg.mentions.length > 0 && msg.member.permissions.has("banMembers") && msg.roleMentions > 0) {
