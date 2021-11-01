@@ -20,7 +20,7 @@ bot.on("error", e => {
 /* WELCOMERS */
 function reactToMessages(msg, channelId, messageId, reaction) {
   if (msg.author.bot) return;
-  if (msg.content.match(/^hi|^hello|^welcome/ig)) {
+  if (msg.content.match(/^(hi)$|^(hello)$|^(welcome)$/ig)) {
     const channelId = `${msg.channel.id}`;
     const messageId = `${msg.id}`;
     const reactions = `${reaction}`;
