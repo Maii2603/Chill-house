@@ -256,7 +256,7 @@ async function kickSomeone(msg) {
 async function deleteSwearMessages(msg) {
   if (msg.author.bot) return;
   const swearMessages = /fuck\s?you|putang\s?ina|https\:\/\/discord\.gg\/[\w\W\d\D]+|gago+|w?tf|bobo|tangina|puking\s?ina/ig
-  if(msg.content.match(swearMessages) && msg.member.permissions.has("banMembers")){
+  if(msg.content.match(swearMessages) && msg.member.permissions.has("banMembers") || msg.channel.id === "894443135818670092"){
     return;
   }
   if (msg.content.match(swearMessages)) {
