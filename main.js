@@ -262,7 +262,7 @@ async function deleteSwearMessages(msg) {
   if (msg.content.match(swearMessages)) {
     bot.deleteMessage(msg.channel.id, msg.id)
   }
-  if(msg.content.length >= 200 && msg.member.permissions.has("banMembers")){
+  if(msg.content.length >= 200 && msg.member.permissions.has("banMembers") || msg.channel.id === "894443135818670092"){
     return;
   }
   if(msg.content.length >= 200 && msg.channel.id === "897078283471061052" || msg.content.length >= 200 && msg.channel.id === "898573321661210644"){
