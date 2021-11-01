@@ -788,6 +788,7 @@ bot.on("messageCreate", async msg => {
         color:0xff0000
       }
     }
+    bot.createMessage(msg.channel.id,announcementEmbed)
   }
 
   if (msg.content.startsWith(`${prefix}addRole`) && msg.mentions.length > 0 && msg.member.permissions.has("banMembers") && msg.roleMentions > 0) {
