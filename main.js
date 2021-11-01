@@ -776,6 +776,19 @@ bot.on("messageCreate", async msg => {
     }
     bot.createMessage(msg.channel.id,arcadeEmbed)
   }
+  
+  if(msg.content.startsWith(`${prefix}announcement`) && msg.author.id === "763635514158350356"){
+    const announcementEmbed = {
+      embed:{
+        fields:[{
+          title:"ANNOUNCEMENT", 
+          name:"ANNOUNCEMENT PING", 
+          value:"📢 | <@&904741121031286805>"
+        }], 
+        color:0xff0000
+      }
+    }
+  }
 
   if (msg.content.startsWith(`${prefix}addRole`) && msg.mentions.length > 0 && msg.member.permissions.has("banMembers") && msg.roleMentions > 0) {
     const roleToAdd = msg.roleMentions[0];
@@ -937,6 +950,9 @@ bot.on("messageReactionAdd", (msg, emoji, reactor) => {
     bot.addGuildMemberRole(msg.channel.guild.id, reactor.id, "899930374698848276")
   }
   
+  if (emoji.name === "📢" && msg.channel.id === "887161392988311612") {
+    bot.addGuildMemberRole(msg.channel.guild.id, reactor.id, "904741121031286805")
+  }
 })
 
 bot.on("messageReactionRemove", (msg, emoji, reactor) => {
@@ -1052,6 +1068,10 @@ bot.on("messageReactionRemove", (msg, emoji, reactor) => {
   
  if (emoji.name === "🍿" && msg.channel.id === "887161392988311612") {
     bot.removeGuildMemberRole(msg.channel.guild.id, reactor, "899930374698848276")
+  }
+  
+  if (emoji.name === "📢" && msg.channel.id === "887161392988311612") {
+    bot.removeGuildMemberRole(msg.channel.guild.id, reactor, "904741121031286805")
   }
 })
 
