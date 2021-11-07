@@ -1,5 +1,16 @@
 const Eris = require("eris");
-const bot = new Eris(`Bot ${process.env.BOT_TOKEN}`);
+const bot = new Eris(`Bot ${process.env.BOT_TOKEN}`,{
+    intents: [
+  "guilds",
+  "guildMessages",
+  "guildMessageReactions",
+  "guildPresences",
+  "guildMembers",
+  "directMessages",
+  "guildMembers",
+  "guildBans"
+  ]
+});
 const axios = require("axios");
 const prefix = "*"
 
@@ -1074,6 +1085,35 @@ bot.on("messageReactionRemove", (msg, emoji, reactor) => {
   if (emoji.name === "📢" && msg.channel.id === "887161392988311612") {
     bot.removeGuildMemberRole(msg.channel.guild.id, reactor, "904741121031286805")
   }
+})
+
+bot.on("guildMemberAdd",(guild,member) => {
+ const welcomeEmbed = {
+   embed:{
+     author:{
+       name:`${member.username}#${member.discriminator}`
+     }, 
+     thumbnail:{
+       url:guild.iconURL
+     },
+     description:`<@${member.id}> Welcome to ${guild.name}\nEnjoy your stay here and have fun talking with us in <#885495865781944360> or join us in VC`, 
+     fields:[{
+       name:"RULES", 
+       value:"<a:emoji_1:906996043051303034> Read the server rules in <#886591125866049597>"
+     },{
+       name:"ROLES", 
+       value:"<a:emoji_1:906996043051303034> Get your roles in <#887161392988311612>"
+     },{
+       name:"INTRODUCTION", 
+       value:"<a:emoji_1:906996043051303034> Introduce yourself in <#898573321661210644>"
+     }], 
+     image:{
+       url:"https://raw.githubusercontent.com/Maii2603/chill-house-images/main/GlowingPurpleLine-1-1.gif"
+     }, 
+     color:0xff0000
+   }
+ }
+ bot.createMessage("885495865781944360",welcomeEmbed)
 })
 
 bot.connect();
