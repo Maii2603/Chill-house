@@ -7,7 +7,6 @@ const bot = new Eris(`Bot ${process.env.BOT_TOKEN}`,{
   "guildPresences",
   "guildMembers",
   "directMessages",
-  "guildMembers",
   "guildBans"
   ]
 });
@@ -1054,7 +1053,7 @@ bot.on("messageReactionRemove", (msg, emoji, reactor) => {
   }
 })
 
-/*bot.on("guildMemberAdd",(guild,member) => {
+bot.on("guildMemberAdd",(guild,member) => {
  const welcomeEmbed = {
    embed:{
      author:{
@@ -1082,6 +1081,6 @@ bot.on("messageReactionRemove", (msg, emoji, reactor) => {
    }
  }
  bot.createMessage("885495865781944360",welcomeEmbed)
-})*/
+})
 
 bot.connect();
