@@ -17,7 +17,7 @@ const prefix = "*"
 bot.on("ready", () => {
   console.log("bot is now ready");
   bot.editStatus("online", {
-    name: "type '*help' to see the commands",
+    name: "type *help to see the commands",
     type: 0
   })
 })
@@ -1091,7 +1091,8 @@ bot.on("guildMemberAdd",(guild,member) => {
  const welcomeEmbed = {
    embed:{
      author:{
-       name:`${member.username}#${member.discriminator}`
+       name:`${member.username}#${member.discriminator}`, 
+       icon_url:member.avatarURL
      }, 
      thumbnail:{
        url:guild.iconURL
