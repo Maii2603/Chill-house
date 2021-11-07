@@ -499,39 +499,6 @@ bot.on("messageCreate", async msg => {
   }
 })
 
-bot.on("messageCreate", msg => {
-  if (msg.content === `${prefix}invite`) {
-    const embedInvite = {
-      embed: {
-        title: "CHILL HOUSE INVITE LINK",
-        description: "This is the permanent invite link of the server use this to invite someone.",
-        fields: [{
-          name: "Invite Link",
-          value: "https://discord.gg/Su2pJnkfHK"
-          }, {
-          name: "LOOKING FOR FRIENDS TO TALK TO",
-          value: "Hello there people! I'd like to present you our discord server, The CHILL HOUSE. We have a lot and different kinds of specimen here, everyone is welcome!! You can do anything you want to be in here as long as you don't hurt other people. \nCome join me and help to grow our server! "
-        }, {
-          name: "WE HAVE",
-          value: "-COOL BOTS\n\n-FRIENDLY ADMIN AND MODS\n\n-SUGGESTION CHANNEL\n\n-AND MORE"
-        }, {
-          name: "OTHER INFO",
-          value: "-NOT A NSFW SERVER\n\n-WE ARE ONLY ACCEPTING 13 y/o AND ABOVE\n\n-WE HAVE FILIPINO MEMBERS\n\n-WE ARE DOING PARTNERSHIPS"
-        }],
-        image: {
-          url: "https://raw.githubusercontent.com/Maii2603/chill-house-images/main/standard%20(1).gif"
-        },
-        footer: {
-          text: "Server Info And Invite Link",
-          icon_url: "https://raw.githubusercontent.com/Maii2603/chill-house-images/main/static.png"
-        },
-        color: 0xff0000
-      }
-    }
-    bot.createMessage(msg.channel.id, embedInvite)
-  }
-})
-
 bot.on("messageCreate", async msg => {
   if (msg.author.bot) return;
   if (msg.content === `${prefix}quote`) {
