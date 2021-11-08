@@ -1095,7 +1095,7 @@ bot.on("messageReactionRemove", (msg, emoji, reactor) => {
   }
   
 })
-/*
+
 bot.on("guildMemberAdd",(guild,member) => {
  const welcomeEmbed = {
    embed:{
@@ -1109,13 +1109,13 @@ bot.on("guildMemberAdd",(guild,member) => {
      description:`Welcome to ${guild.name}\nEnjoy your stay here and have fun talking with us in <#885495865781944360> or join us in VC`, 
      fields:[{
        name:"RULES", 
-       value:"<a:arrow:906996043051303034> Read the server rules in\n <#886591125866049597>"
+       value:"<a:arrow:906996043051303034>  Read the server rules in\n <#886591125866049597>"
      },{
        name:"ROLES", 
-       value:"<a:arrow:906996043051303034> Get your roles in\n <#887161392988311612>"
+       value:"<a:arrow:906996043051303034>  Get your roles in\n <#887161392988311612>"
      },{
        name:"INTRODUCTION", 
-       value:"<a:arrow:906996043051303034> Introduce yourself in\n<#898573321661210644>"
+       value:"<a:arrow:906996043051303034>  Introduce yourself in\n<#898573321661210644>"
      }], 
      image:{
        url:"https://raw.githubusercontent.com/Maii2603/chill-house-images/main/GlowingPurpleLine-1-1.gif"
@@ -1124,9 +1124,10 @@ bot.on("guildMemberAdd",(guild,member) => {
    }
  }
  bot.createMessage("885495865781944360",welcomeEmbed)
- /*.then(message => {
-   
+ .then(message => {
+    bot.addMessageReaction(msg.channel.id,msg.id,"a:emoji_2:906996079780839474")
+    bot.addMessageReaction(msg.channel.id,msg.id,"a:emoji_3:906996210374701077")
  })
-})*/
+})
 
 bot.connect();
