@@ -823,6 +823,17 @@ bot.on("messageCreate", async msg => {
     }
     bot.createMessage(msg.channel.id,keyEmbed);
   }
+  
+    if(msg.content.startsWith(`${prefix}arcadekey`) && msg.author.id === "763635514158350356"){
+    const arcadeEmbed = {
+      embed:{
+        title:"ARCADE GAMES", 
+        description:"━━━━━━━━━\n\n\n\n Hit the invader 👾 below to unclock Arcade Games Royale\n\n\n\n━━━━━━━━━", 
+        color:0xff0000
+      }
+    }
+    bot.createMessage(msg.channel.id,arcadeEmbed);
+  }
 })
 
 bot.on("messageReactionAdd", (msg, emoji, reactor) => {
@@ -937,6 +948,11 @@ bot.on("messageReactionAdd", (msg, emoji, reactor) => {
   if (emoji.name === "🔑" && msg.channel.id === "907062150663659540") {
     bot.addGuildMemberRole(msg.channel.guild.id, reactor.id, "899699491958063124")
   }
+ 
+  if (emoji.name === "👾" && msg.channel.id === "907063060945051678") {
+    bot.addGuildMemberRole(msg.channel.guild.id, reactor.id, "889915918061297795")
+  }
+  
 })
 
 bot.on("messageReactionRemove", (msg, emoji, reactor) => {
@@ -1052,6 +1068,10 @@ bot.on("messageReactionRemove", (msg, emoji, reactor) => {
   
     if (emoji.name === "🔑" && msg.channel.id === "907062150663659540") {
     bot.removeGuildMemberRole(msg.channel.guild.id, reactor, "899699491958063124")
+  }
+  
+    if (emoji.name === "👾" && msg.channel.id === "907063060945051678") {
+    bot.removeGuildMemberRole(msg.channel.guild.id, reactor, "889915918061297795")
   }
 })
 /*
