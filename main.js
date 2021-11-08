@@ -1052,7 +1052,7 @@ bot.on("messageReactionRemove", (msg, emoji, reactor) => {
     bot.removeGuildMemberRole(msg.channel.guild.id, reactor, "904741121031286805")
   }
 })
-
+/*
 bot.on("guildMemberAdd",(guild,member) => {
  const welcomeEmbed = {
    embed:{
@@ -1081,6 +1081,6 @@ bot.on("guildMemberAdd",(guild,member) => {
    }
  }
  bot.createMessage("885495865781944360",welcomeEmbed)
-})
+})*/
 
 bot.connect();
