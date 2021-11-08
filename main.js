@@ -1125,8 +1125,8 @@ bot.on("guildMemberAdd",(guild,member) => {
  }
  bot.createMessage("885495865781944360",welcomeEmbed)
  .then(message => {
-    bot.addMessageReaction(message.channel.id,msg.id,"a:emoji_2:906996079780839474")
-    bot.addMessageReaction(message.channel.id,msg.id,"a:emoji_3:906996210374701077")
+    bot.addMessageReaction(message.channel.id,message.id,"a:emoji_2:906996079780839474")
+    bot.addMessageReaction(message.channel.id,message.id,"a:emoji_3:906996210374701077")
  })
 })
 
