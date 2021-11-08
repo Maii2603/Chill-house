@@ -813,6 +813,16 @@ bot.on("messageCreate", async msg => {
     bot.createMessage(msg.channel.id,requirementsEmbed)
   }
   
+  if(msg.content.startsWith(`${prefix}casinokey`) && msg.author.id === "763635514158350356"){
+    const keyEmbed = {
+      embed:{
+        title:"CASINO PASS", 
+        description:"━━━━━━━━━\n\n\n\n Hit the Key 🔑 below to unclock Casino Royale\n\n\n\n━━━━━━━━━", 
+        color:0xff0000
+      }
+    }
+    bot.createMessage(msg.channel.id,keyEmbed);
+  }
 })
 
 bot.on("messageReactionAdd", (msg, emoji, reactor) => {
@@ -915,21 +925,17 @@ bot.on("messageReactionAdd", (msg, emoji, reactor) => {
    if (emoji.name === "🎀" && msg.channel.id === "887161392988311612") {
     bot.addGuildMemberRole(msg.channel.guild.id, reactor.id, "903482516013453333")
   }
-  
-   if (emoji.name === "🎮" && msg.channel.id === "887161392988311612") {
-    bot.addGuildMemberRole(msg.channel.guild.id, reactor.id, "889915918061297795")
-  }
-  
- if (emoji.name === "🎰" && msg.channel.id === "887161392988311612") {
-    bot.addGuildMemberRole(msg.channel.guild.id, reactor.id, "899699491958063124")
-  }
-  
+
    if (emoji.name === "🍿" && msg.channel.id === "887161392988311612") {
     bot.addGuildMemberRole(msg.channel.guild.id, reactor.id, "899930374698848276")
   }
   
   if (emoji.name === "📢" && msg.channel.id === "887161392988311612") {
     bot.addGuildMemberRole(msg.channel.guild.id, reactor.id, "904741121031286805")
+  }
+  
+  if (emoji.name === "🔑" && msg.channel.id === "907062150663659540") {
+    bot.addGuildMemberRole(msg.channel.guild.id, reactor.id, "899699491958063124")
   }
 })
 
@@ -1036,20 +1042,16 @@ bot.on("messageReactionRemove", (msg, emoji, reactor) => {
     bot.removeGuildMemberRole(msg.channel.guild.id, reactor, "903482516013453333")
   }
   
-  if (emoji.name === "🎮" && msg.channel.id === "887161392988311612") {
-    bot.removeGuildMemberRole(msg.channel.guild.id, reactor, "889915918061297795")
-  }
-  
- if (emoji.name === "🎰" && msg.channel.id === "887161392988311612") {
-    bot.removeGuildMemberRole(msg.channel.guild.id, reactor, "899699491958063124")
-  }
-  
  if (emoji.name === "🍿" && msg.channel.id === "887161392988311612") {
     bot.removeGuildMemberRole(msg.channel.guild.id, reactor, "899930374698848276")
   }
   
   if (emoji.name === "📢" && msg.channel.id === "887161392988311612") {
     bot.removeGuildMemberRole(msg.channel.guild.id, reactor, "904741121031286805")
+  }
+  
+    if (emoji.name === "🔑" && msg.channel.id === "907062150663659540") {
+    bot.removeGuildMemberRole(msg.channel.guild.id, reactor, "899699491958063124")
   }
 })
 /*
