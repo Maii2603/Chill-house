@@ -11,7 +11,7 @@ const bot = new Eris(`Bot ${process.env.BOT_TOKEN}`,{
   ]
 });
 const axios = require("axios");
-const getEmoji = require("emoji")
+const getEmoji = require("./emoji")
 const prefix = "*"
 
 bot.on("ready", () => {
