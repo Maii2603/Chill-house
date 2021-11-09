@@ -496,6 +496,20 @@ bot.on("messageCreate", async msg => {
     }
     bot.createMessage(msg.channel.id,thirdCategory)
   }
+  
+  if(msg.content === "*booster" && msg.author.id === "763635514158350356"){
+    const boosterEmbed = {
+      embed:{
+        title:"Booster Perks", 
+        thumbnail:{
+          url:msg.channel.guild.iconURL
+        }, 
+        description:"With <@&899918660586586132>  role, we will now be able to work together to unlock some fresh, new, and improved collective perks and share those epic perks to the rest in our community!\n\nCH Boosters Perks —\n• Can change nickname anytime.\n• Unlimited usage of external emojis.\n• Can upload files or media in text channels.\n• 500,000 casino coin.", 
+        color:0xff0000
+      }
+    }
+    bot.createMessage(msg.channel.id,boosterEmbed)
+  }
 })
 
 bot.on("messageCreate", async msg => {
