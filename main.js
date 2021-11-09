@@ -11,6 +11,7 @@ const bot = new Eris(`Bot ${process.env.BOT_TOKEN}`,{
   ]
 });
 const axios = require("axios");
+const getEmoji = require("emoji")
 const prefix = "*"
 
 bot.on("ready", () => {
@@ -295,6 +296,7 @@ bot.on("messageCreate", msg => {
   if(msg.author.id === "276060004262477825" && msg.channel.id === "885734911187779585"){
     bot.createMessage(msg.channel.id,`<@&898390009210621962> Let's welcome our new member in <#885495865781944360>`)
   }
+  getEmoji(msg,bot,prefix)
 })
 
 
