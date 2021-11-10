@@ -510,7 +510,19 @@ bot.on("messageCreate", async msg => {
     }
     bot.createMessage(msg.channel.id,boosterEmbed)
   }
-  
+  if(msg.content === `*staff-application` && msg.author.id === "763635514158350356"){
+    const staffAppEmbed = {
+      embed:{
+        title:"Notice", 
+        thumbnail:{
+          url:msg.channel.guild.iconURL
+        }, 
+        description:"<:blurple_announcements:906850487393976330> We are always striving to provide a fun yet safe and secure environment for our growing community. With that said, we are now looking for active members to join our Moderator Team to help keep text chats and voice chats free of toxic and NSFW behavior's\nChill House Requirements:\n\n<:froggy_arrow:904762712217780316> Must be 16 above\n\n<:froggy_arrow:904762712217780316> Being familiar with <#897825719428730880> ... \n\n<:froggy_arrow:904762712217780316>Consistent activity in the server.\n\n<:froggy_arrow:904762712217780316>Having a very small, or nil number of recent server offenses.\n\nDm <@885482371594453032> , and he will ask you some few questions... GOODLUCK!!!<:ZeroTwo_heartlove:893519792194084915>\n\n--<@&904741121031286805> --", 
+        color:0xff0000
+      }
+    }
+    bot.createMessage(msg.channel.id,staffAppEmbed)
+  }
 })
 
 bot.on("messageCreate", async msg => {
