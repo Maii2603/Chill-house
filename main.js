@@ -1133,7 +1133,7 @@ bot.on("guildMemberAdd",(guild,member) => {
      thumbnail:{
        url:guild.iconURL
      },
-     description:`Welcome to ${guild.name}\nEnjoy your stay here and have fun talking with us in <#885495865781944360> or join us in VC`, 
+     description:`Welcome to ${guild.name}\nEnjoy your stay here and have fun talking with us in <#908720476027764766> or join us in VC`, 
      fields:[{
        name:"RULES", 
        value:"<a:arrow:906996043051303034>  Read the server rules in\n <#908978049494704158>"
