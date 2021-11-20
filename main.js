@@ -285,11 +285,14 @@ async function deleteSwearMessages(msg) {
 }
 
 /* WELCOME MESSAGES */
-
+/*
+<a:Zblue4L_cute:911564639345705002> 
+<a:zy4L_inlove:911564601873801216> 
+<a:Ypink4L_wave:911564573147013170>*/
 bot.on("messageCreate", msg => {
-  reactToMessages(msg, msg.channel.id, msg.id, "Pepe_Crown:892783785656074241");
-  reactToMessages(msg, msg.channel.id, msg.id, "👋");
-  reactToMessages(msg, msg.channel.id, msg.id, "ZeroTwo_heartlove:893519792194084915");
+  reactToMessages(msg, msg.channel.id, msg.id, "a:Zblue4L_cute:911564639345705002");
+  reactToMessages(msg, msg.channel.id, msg.id, "a:zy4L_inlove:911564601873801216");
+  reactToMessages(msg, msg.channel.id, msg.id, "a:Ypink4L_wave:911564573147013170");
   if(msg.author.id === "276060004262477825" && msg.channel.id === "885734911187779585"){
     bot.createMessage(msg.channel.id,`<@&898390009210621962> Let's welcome our new member in <#885495865781944360>`)
   }
