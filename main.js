@@ -112,7 +112,7 @@ async function banMembers(msg) {
 }
 
 async function filterBadWords(msg) {
-  const badWords = /nigga|nigger/ig
+  const badWords = /^(nigga)$|^(niggers?)$/ig
   if (msg.content.match(badWords)) {
     const channelId = msg.channel.id;
     const messageId = msg.id;
@@ -270,10 +270,10 @@ async function deleteSwearMessages(msg) {
   if (msg.content.match(swearMessages)) {
     bot.deleteMessage(msg.channel.id, msg.id)
   }
-  if(msg.content.length >= 200 && msg.member.permissions.has("banMembers") || msg.channel.id === "894443135818670092"){
+  if(msg.content.length >= 200 && msg.member.permissions.has("banMembers") || msg.content.length >= 200 && msg.channel.id == "908980116795850772"){
     return;
   }
-  if(msg.content.length >= 200 && msg.channel.id === "908980116795850772" || msg.content.length >= 200 && msg.channel.id === "908720476027764766"){
+  if(msg.content.length >= 200 && msg.channel.id === "908720476027764766" || msg.content.length >= 200 && msg.channel.id == "918419158167867452"){
     return;
   }
   if (msg.content.length >= 200) {
